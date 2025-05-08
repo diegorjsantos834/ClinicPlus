@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Clinic+ - Telefone, e-mail, endereço e formulário de contato">
+    <link rel="stylesheet" href="../CSS/cssContatos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+    <title>Contato | Clinic+</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo Clinic+" width="40" height="auto" loading="lazy">
+                <span class="brand-name">  Clinic+</span>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu" aria-label="Menu mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../Index.html" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="../Sobre/Sobre nós.html" class="nav-links">Sobre</a></li>
+                <li class="nav-item"><a href="../Serviços/serviços.html" class="nav-links">Serviços</a></li>
+                <li class="nav-item active"><a href="Contato.html" class="nav-links">Contato</a></li>
+                <li class="nav-item cta-button"><a href="../Cadastro/CadastroProfissa.html" class="nav-links">Entrar/Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        <h1>Contato</h1>
+        <p class="subtitle">Entre em contato facilmente com nossa equipe</p>
+          
+        <div class="contato-container">
+            <div class="contato-item">
+                <div class="contato-icon">
+                    <img src="../IMG/Imagens/telefone..png" alt="Ícone de telefone" width="50" height="auto" loading="lazy">
+                </div>
+                <h2>Telefone:</h2>
+                <p><a href="tel:+551198568696">(11) 98568-9696</a></p>
+                <p class="contato-extra">Atendimento 24h para emergências</p>
+            </div>
+
+            <div class="contato-item">
+                <div class="contato-icon">
+                    <img src="../IMG/Imagens/insta-removebg-preview.png" alt="Ícone do Instagram" width="50" height="auto" loading="lazy">
+                </div>
+                <h2>Instagram:</h2>
+                <p><a href="https://www.instagram.com/clinicplus" target="_blank" rel="noopener noreferrer">@ClinicPlus</a></p>
+                <p class="contato-extra">Siga-nos para dicas de saúde</p>
+            </div>
+
+            <div class="contato-item">
+                <div class="contato-icon">
+                    <img src="../IMG/Imagens/carta-removebg-preview.png" alt="Ícone de e-mail" width="50" height="auto" loading="lazy">
+                </div>
+                <h2>E-mail:</h2>
+                <p><a href="mailto:contato@clinicplus.com.br">contato@clinicplus.com.br</a></p>
+                <p class="contato-extra">Respondemos em até 24h</p>
+            </div>
+
+            <div class="contato-item">
+                <div class="contato-icon">
+                    <img src="../IMG/Imagens/mapa.svg" alt="Ícone de localização" width="50" height="auto" loading="lazy">
+                </div>
+                <h2>Endereço:</h2>
+                <p><a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer">Av. Paulista, 1000 - São Paulo/SP</a></p>
+                <p class="contato-extra">Próximo ao metrô Trianon-MASP</p>
+            </div>
+
+            <div class="contato-item horario-atendimento">
+                <h3>Horário de atendimento</h3>
+                <p>Segunda a Sexta: 8h às 20h<br>Sábado: 8h às 14h</p>
+            </div>
+            
+            <div class="mapa-container">
+                <h2>Nos encontre facilmente</h2>
+                <div class="mapa-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.3764152672734!2d-46.6582349246873!3d-23.55493047879863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1717521270933!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-label="Mapa da localização da Clinic+">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="formulario-contato">
+                <h2>Envie uma mensagem</h2>
+                <form id="contactForm" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo Clinic+" width="40" loading="lazy">
+                    <span class="brand-name">Clinic+</span>
+                </div>
+                <p>Sua saúde é nossa prioridade. Oferecemos os melhores serviços médicos com tecnologia de ponta e atendimento humanizado.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/clinicplus" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/551198568696" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../Sobre nós.html">Sobre Nós</a></li>
+                    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+                    <li><a href="../Cadastro/CadastroProfissa.html">Contato</a></li>
+                </ul>
+            </div>
+    
+            
+    
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/example" target="_blank" rel="noopener">Av. Paulista, 1000 - São Paulo/SP</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+551198568696">(11) 98568-9696</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contato@clinicplus.com.br">contato@clinicplus.com.br</a></li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</li>
+                    <li><i class="fas fa-ambulance"></i> <a href="tel:+5511999999999">Emergências 24h</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="current-year"></span> clinic+. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="PoliticaPrivacidade.html">Política de Privacidade</a>
+                    <a href="TermosUso.html">Termos de Uso</a>
+                    <a href="TrabalheConosco.html">Trabalhe Conosco</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Contatos.js"></script>
+</body>
+</html>

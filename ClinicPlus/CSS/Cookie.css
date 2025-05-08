@@ -1,0 +1,33 @@
+    /* Estilo do Pop-up de Cookies */
+    .cookie-consent {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        border-top: 3px solid #00a979;
+        padding: 1.5rem;
+        z-index: 9999;
+        transition: bottom 0.5s ease-in-out;
+    }
+
+    .cookie-consent.active {
+        bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+        .cookie-consent {
+            max-width: 400px;
+            bottom: -100%;
+            right: 30px;
+            left: auto;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 169, 121, 0.2);
+            border-top: 3px solid #00a979;
+        }
+        
+        .cookie-consent.active {
+            bottom: 30px;
+        }
+    }

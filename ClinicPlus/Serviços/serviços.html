@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica+ - Serviços</title>
+    <link rel="stylesheet" href="../CSS/Sobre.css">
+    <link rel="stylesheet" href="../CSS/Servicos.css">
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+</head>
+</head>
+<body>
+  <header class="cabecalho-azul">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" class="logo-img">
+                <span class="brand-name">Clinic+</span>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../Index.html" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="../Sobre/Sobre nós.html" class="nav-links">Sobre</a></li>
+                <li class="nav-item active"><a href="../Serviços/serviços.html" class="nav-links">Serviços</a></li>
+                <li class="nav-item"><a href="../Contato/Contato.html" class="nav-links">Contato</a></li>
+                <li class="nav-item cta-button"><a href="../Cadastro/CadastroProfissa.html" class="nav-links">Entrar/Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section class="servicos">
+        <h2>Nossas Clínicas Parceiras em São Paulo</h2>
+
+        <div class="filtro">
+            <input type="text" id="buscar-clinica" placeholder="Buscar por nome da clínica">
+            <select id="filtrar-area">
+                <option value="">Todas as áreas</option>
+                <option value="cardiologia">Cardiologia</option>
+                <option value="dermatologia">Dermatologia</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="pediatria">Pediatria</option>
+                <option value="ginecologia">Ginecologia</option>
+                <option value="odontologia">Odontologia</option>
+                <option value="oftalmologia">Oftalmologia</option>
+                <option value="neurologia">Neurologia</option>
+                <option value="psiquiatria">Psiquiatria</option>
+                <option value="endocrinologia">Endocrinologia</option>
+                <option value="pneumologia">Pneumologia</option>
+                <option value="nefrologia">Nefrologia</option>
+                <option value="gastroenterologia">Gastroenterologia</option>
+                <option value="hematologia">Hematologia</option>
+                <option value="alergologia">Alergologia</option>
+                <option value="fisioterapia">Fisioterapia</option>
+                <option value="fonoaudiologia">Fonoaudiologia</option>
+                <option value="nutricao">Nutrição</option>
+                <option value="oncologia">Oncologia</option>
+                <option value="geriatria">Geriatria</option>
+            </select>
+            <select id="filtrar-avaliacao">
+                <option value="">Todas as avaliações</option>
+                <option value="4">4 estrelas ou mais</option>
+                <option value="3">3 estrelas ou mais</option>
+                <option value="2">2 estrelas ou mais</option>
+            </select>
+            <select id="filtrar-convenio">
+                <option value="">Todos os convênios</option>
+                <option value="amil">Amil</option>
+                <option value="bradesco">Bradesco Saúde</option>
+                <option value="sulamerica">SulAmérica</option>
+            </select>
+        </div>
+
+        <ul class="lista-clinicas">
+            <!-- Clínica Coração Feliz -->
+            <li class="clinica" data-nome="Clínica Coração Feliz" data-area="cardiologia" data-avaliacao="5" data-convenios="amil,bradesco">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Clínica Coração Feliz</h3>
+                        <p>Área: Cardiologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★★ (52 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Especializada em arritmias e check-ups cardiológicos.</p>
+                            <p><strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
+                            <p><strong>Horário:</strong> Seg a Sex, 8h-18h</p>
+                            <p><strong>Convênios:</strong> Amil, Bradesco Saúde</p>
+                            <p><strong>Contato:</strong> (11) 1234-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Carlos Silva</strong>
+                                <p>Cardiologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Ana Oliveira</strong>
+                                <p>Especialista em Arritmias</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Marcos Santos</strong>
+                                <p>Ecocardiografista</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Clínica Coração Feliz">Marcar Consulta</button>
+                    <a href="../Clínicas/CoracaoFeliz.html" class="ver-detalhes" data-clinica="Clínica Coração Feliz">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Pele Saudável Dermatologia -->
+            <li class="clinica" data-nome="Pele Saudável Dermatologia" data-area="dermatologia" data-avaliacao="4" data-convenios="sulamerica">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Pele Saudável Dermatologia</h3>
+                        <p>Área: Dermatologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★☆ (38 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Focada em tratamentos para acne, manchas e rejuvenescimento.</p>
+                            <p><strong>Endereço:</strong> Avenida Paulista, 500 - Bela Vista</p>
+                            <p><strong>Horário:</strong> Ter a Sab, 9h-19h</p>
+                            <p><strong>Convênios:</strong> SulAmérica</p>
+                            <p><strong>Contato:</strong> (11) 9876-5432</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dra. Juliana Costa</strong>
+                                <p>Dermatologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Ricardo Mendes</strong>
+                                <p>Especialista em Cirurgia Dermatológica</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Fernanda Lima</strong>
+                                <p>Especialista em Cosmiatria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Pele Saudável Dermatologia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Pele Saudável Dermatologia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Mãos e Pés Ortopedia -->
+            <li class="clinica" data-nome="Mãos e Pés Ortopedia" data-area="ortopedia" data-avaliacao="3" data-convenios="amil">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Mãos e Pés Ortopedia</h3>
+                        <p>Área: Ortopedia</p>
+                        <div class="avaliacao">Avaliação: ★★★☆☆ (25 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Especialistas em lesões esportivas e reabilitação.</p>
+                            <p><strong>Endereço:</strong> Rua Augusta, 900 - Cerqueira César</p>
+                            <p><strong>Horário:</strong> Seg a Sex, 7h-19h</p>
+                            <p><strong>Convênios:</strong> Amil</p>
+                            <p><strong>Contato:</strong> (11) 3344-5566</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Rafael Gonçalves</strong>
+                                <p>Ortopedista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Patrícia Martins</strong>
+                                <p>Especialista em Traumatologia</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Lucas Fernandes</strong>
+                                <p>Cirurgião de Mãos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Mãos e Pés Ortopedia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Mãos e Pés Ortopedia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Sorriso Kids Odontologia -->
+            <li class="clinica" data-nome="Sorriso Kids Odontologia" data-area="odontologia" data-avaliacao="5" data-convenios="bradesco,sulamerica">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Sorriso Kids Odontologia</h3>
+                        <p>Área: Odontologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★★ (61 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Atendimento odontológico especializado para crianças.</p>
+                            <p><strong>Endereço:</strong> Alameda Santos, 1000 - Jardim Paulista</p>
+                            <p><strong>Horário:</strong> Seg a Sab, 10h-20h</p>
+                            <p><strong>Convênios:</strong> Bradesco Saúde, SulAmérica</p>
+                            <p><strong>Contato:</strong> (11) 4455-6677</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dra. Camila Almeida</strong>
+                                <p>Odontopediatra Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Fábio Rocha</strong>
+                                <p>Ortodontista Infantil</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Beatriz Santos</strong>
+                                <p>Especialista em Odontologia Preventiva</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Sorriso Kids Odontologia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Sorriso Kids Odontologia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Visão Clara Oftalmologia -->
+            <li class="clinica" data-nome="Visão Clara Oftalmologia" data-area="oftalmologia" data-avaliacao="4" data-convenios="amil">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Visão Clara Oftalmologia</h3>
+                        <p>Área: Oftalmologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★☆ (45 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Consultas, exames e cirurgias oculares.</p>
+                            <p><strong>Endereço:</strong> Rua Bela Cintra, 300 - Consolação</p>
+                            <p><strong>Horário:</strong> Seg a Sex, 9h-18h</p>
+                            <p><strong>Convênios:</strong> Amil</p>
+                            <p><strong>Contato:</strong> (11) 7788-9900</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Eduardo Lima</strong>
+                                <p>Oftalmologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Mariana Costa</strong>
+                                <p>Especialista em Catarata</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. André Pereira</strong>
+                                <p>Cirurgião de Retina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Visão Clara Oftalmologia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Visão Clara Oftalmologia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Neuro Center SP -->
+            <li class="clinica" data-nome="Neuro Center SP" data-area="neurologia" data-avaliacao="4" data-convenios="bradesco">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Neuro Center SP</h3>
+                        <p>Área: Neurologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★☆ (31 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Tratamento de doenças neurológicas e acompanhamento.</p>
+                            <p><strong>Endereço:</strong> Rua Haddock Lobo, 700 - Jardins</p>
+                            <p><strong>Horário:</strong> Ter a Sex, 10h-17h</p>
+                            <p><strong>Convênios:</strong> Bradesco Saúde</p>
+                            <p><strong>Contato:</strong> (11) 2233-4455</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Roberto Almeida</strong>
+                                <p>Neurologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Silvia Mendes</strong>
+                                <p>Especialista em Epilepsia</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Gustavo Nunes</strong>
+                                <p>Neurocirurgião</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Neuro Center SP">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Neuro Center SP">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Equilíbrio Mente Corpo -->
+            <li class="clinica" data-nome="Equilíbrio Mente Corpo" data-area="psiquiatria" data-avaliacao="5" data-convenios="sulamerica,amil">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Equilíbrio Mente Corpo</h3>
+                        <p>Área: Psiquiatria</p>
+                        <div class="avaliacao">Avaliação: ★★★★★ (58 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Atendimento psiquiátrico e psicoterapia.</p>
+                            <p><strong>Endereço:</strong> Rua Oscar Freire, 1100 - Pinheiros</p>
+                            <p><strong>Horário:</strong> Seg a Sab, 9h-21h</p>
+                            <p><strong>Convênios:</strong> SulAmérica, Amil</p>
+                            <p><strong>Contato:</strong> (11) 5566-7788</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dra. Vanessa Oliveira</strong>
+                                <p>Psiquiatra Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Marcelo Silva</strong>
+                                <p>Especialista em Depressão</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Carolina Rocha</strong>
+                                <p>Psicoterapeuta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Equilíbrio Mente Corpo">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Equilíbrio Mente Corpo">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Hormônio em Dia -->
+            <li class="clinica" data-nome="Hormônio em Dia" data-area="endocrinologia" data-avaliacao="3" data-convenios="bradesco">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Hormônio em Dia</h3>
+                        <p>Área: Endocrinologia</p>
+                        <div class="avaliacao">Avaliação: ★★★☆☆ (29 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Tratamento de distúrbios hormonais e metabólicos.</p>
+                            <p><strong>Endereço:</strong> Rua Tabapuã, 1500 - Itaim Bibi</p>
+                            <p><strong>Horário:</strong> Qua a Sex, 8h-17h</p>
+                            <p><strong>Convênios:</strong> Bradesco Saúde</p>
+                            <p><strong>Contato:</strong> (11) 8899-0011</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dra. Renata Fernandes</strong>
+                                <p>Endocrinologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Leonardo Martins</strong>
+                                <p>Especialista em Diabetes</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Juliana Castro</strong>
+                                <p>Nutróloga</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Hormônio em Dia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Hormônio em Dia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Bem Estar Materno Infantil -->
+            <li class="clinica" data-nome="Bem Estar Materno Infantil" data-area="ginecologia" data-avaliacao="5" data-convenios="amil,sulamerica,bradesco">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Bem Estar Materno Infantil</h3>
+                        <p>Área: Ginecologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★★ (70 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Acompanhamento ginecológico, obstétrico e pediátrico.</p>
+                            <p><strong>Endereço:</strong> Avenida Ibirapuera, 2000 - Moema</p>
+                            <p><strong>Horário:</strong> Seg a Sex, 7h-20h</p>
+                            <p><strong>Convênios:</strong> Amil, SulAmérica, Bradesco Saúde</p>
+                            <p><strong>Contato:</strong> (11) 1122-3344</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dra. Ana Paula Souza</strong>
+                                <p>Ginecologista e Obstetra</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Ricardo Alves</strong>
+                                <p>Pediatra Neonatal</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Fernanda Costa</strong>
+                                <p>Especialista em Reprodução Humana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Bem Estar Materno Infantil">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Bem Estar Materno Infantil">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Criança Feliz Pediatria -->
+            <li class="clinica" data-nome="Criança Feliz Pediatria" data-area="pediatria" data-avaliacao="4" data-convenios="amil">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Criança Feliz Pediatria</h3>
+                        <p>Área: Pediatria</p>
+                        <div class="avaliacao">Avaliação: ★★★★☆ (41 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Consultas pediátricas e acompanhamento do crescimento.</p>
+                            <p><strong>Endereço:</strong> Rua Sena Madureira, 1300 - Vila Mariana</p>
+                            <p><strong>Horário:</strong> Seg a Sab, 8h-18h</p>
+                            <p><strong>Convênios:</strong> Amil</p>
+                            <p><strong>Contato:</strong> (11) 6677-8899</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Carlos Eduardo</strong>
+                                <p>Pediatra Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Patrícia Nunes</strong>
+                                <p>Especialista em Alergia Infantil</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Mariana Oliveira</strong>
+                                <p>Neonatologista</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Criança Feliz Pediatria">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Criança Feliz Pediatria">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Pulmão Saudável Pneumologia -->
+            <li class="clinica" data-nome="Pulmão Saudável Pneumologia" data-area="pneumologia" data-avaliacao="4" data-convenios="bradesco,sulamerica">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Pulmão Saudável Pneumologia</h3>
+                        <p>Área: Pneumologia</p>
+                        <div class="avaliacao">Avaliação: ★★★★☆ (35 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Diagnóstico e tratamento de doenças respiratórias.</p>
+                            <p><strong>Endereço:</strong> Rua Domingos de Moraes, 1800 - Vila Mariana</p>
+                            <p><strong>Horário:</strong> Ter a Sex, 9h-17h</p>
+                            <p><strong>Convênios:</strong> Bradesco Saúde, SulAmérica</p>
+                            <p><strong>Contato:</strong> (11) 9900-1122</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Marcelo Andrade</strong>
+                                <p>Pneumologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Luciana Ferreira</strong>
+                                <p>Especialista em Asma</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Rodrigo Santos</strong>
+                                <p>Especialista em Doenças Pulmonares</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Pulmão Saudável Pneumologia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Pulmão Saudável Pneumologia">Ver Detalhes</a>
+                </div>
+            </li>
+
+            <!-- Rins em Equilíbrio Nefrologia -->
+            <li class="clinica" data-nome="Rins em Equilíbrio Nefrologia" data-area="nefrologia" data-avaliacao="3" data-convenios="amil">
+                <div class="clinica-container">
+                    <div class="clinica-info">
+                        <h3>Rins em Equilíbrio Nefrologia</h3>
+                        <p>Área: Nefrologia</p>
+                        <div class="avaliacao">Avaliação: ★★★☆☆ (22 avaliações)</div>
+                        <div class="clinica-detalhes">
+                            <p><strong>Descrição:</strong> Tratamento de doenças renais e hipertensão.</p>
+                            <p><strong>Endereço:</strong> Rua Pedro de Toledo, 1900 - Vila Clementino</p>
+                            <p><strong>Horário:</strong> Seg a Qua, 10h-16h</p>
+                            <p><strong>Convênios:</strong> Amil</p>
+                            <p><strong>Contato:</strong> (11) 4933-4999</p>
+                        </div>
+                    </div>
+                    
+                    <div class="medicos-container">
+                        <h4>Nossos Médicos</h4>
+                        <div class="medicos-lista">
+                            <div class="medico">
+                                <strong>Dr. Antonio Carlos</strong>
+                                <p>Nefrologista Chefe</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dra. Renata Mendes</strong>
+                                <p>Especialista em Hipertensão</p>
+                            </div>
+                            <div class="medico">
+                                <strong>Dr. Gustavo Lima</strong>
+                                <p>Especialista em Transplante Renal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clinica-actions">
+                    <button class="btn-marcar-consulta" data-clinica="Rins em Equilíbrio Nefrologia">Marcar Consulta</button>
+                    <a href="#" class="ver-detalhes" data-clinica="Rins em Equilíbrio Nefrologia">Ver Detalhes</a>
+                </div>
+            </li>
+        </ul>
+
+        <div id="modal-consulta" class="modal">
+            <div class="modal-conteudo">
+                <span class="fechar-modal">&times;</span>
+                <h3>Marcar Consulta em <span id="nome-clinica-modal"></span></h3>
+                <form id="form-consulta">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" min="0" max="120" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone">
+                    
+                    <label for="tipo-consulta">Tipo de Consulta:</label>
+                    <select id="tipo-consulta" required>
+                        <option value="">Selecione...</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="online">Online</option>
+                    </select>
+                    
+                    <label for="data">Data Desejada:</label>
+                    <input type="date" id="data" required>
+                    
+                    <label for="horario">Horário Desejado:</label>
+                    <input type="time" id="horario">
+                    
+                    <label for="mensagem">Mensagem (opcional):</label>
+                    <textarea id="mensagem"></textarea>
+                    
+                    <button type="submit">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" width="40">
+                    <span class="brand-name">Clinic+</span>
+                </div>
+                <p>Sua saúde é nossa prioridade. Oferecemos os melhores serviços médicos com tecnologia de ponta e atendimento humanizado.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/clinicplus" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+    
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../Sobre/Sobre nós.html">Sobre Nós</a></li>
+                    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+                    <li><a href="../Contato/Contato.html">Contato</a></li>
+                </ul>
+            </div>
+    
+            
+    
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer">Av. Paulista, 1000 - São Paulo/SP</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+551198568696">(11) 98568-9696</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contato@clinicplus.com.br">contato@clinicplus.com.br</a></li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</li>
+                    <li><i class="fas fa-ambulance"></i> Emergências 24h</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="current-year"></span> clinic+. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Atualiza o ano automaticamente
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+    <script>
+        // Menu mobile
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+
+    <script src="../JavaScript/Servicos.js"></script>
+</body>
+</html>

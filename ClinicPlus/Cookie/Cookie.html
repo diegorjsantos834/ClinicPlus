@@ -1,0 +1,63 @@
+ 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic+ - Cookie Consent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JavaScript/Cookie.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/Cookie.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    
+    <!-- Conteúdo do site original continua aqui -->
+    
+    <!-- Pop-up de Consentimento de Cookies -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="flex items-start mb-4">
+            <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                <i class="fas fa-cookie-bite text-lg"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Política de Cookies</h3>
+                <p class="text-gray-600 text-sm">Utilizamos cookies para melhorar sua experiência em nosso site, personalizar conteúdo e anúncios, fornecer recursos de mídia social e analisar nosso tráfego.</p>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-100 pt-4 mb-4">
+            <div class="flex items-center mb-3">
+                <input type="checkbox" id="essentialCookies" checked disabled class="w-4 h-4 accent-green-600">
+                <label for="essentialCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies essenciais (obrigatórios)</label>
+            </div>
+            <div class="flex items-center mb-3">
+                <input type="checkbox" id="analyticalCookies" checked class="w-4 h-4 accent-green-600">
+                <label for="analyticalCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies analíticos</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="marketingCookies" checked class="w-4 h-4 accent-green-600">
+                <label for="marketingCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies de marketing</label>
+            </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-2">
+            <button id="acceptAllCookies" class="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-all flex-1">
+                Aceitar todos
+            </button>
+            <button id="acceptSelectedCookies" class="border border-green-600 text-green-600 py-2 px-4 rounded-lg font-medium hover:bg-green-50 transition-all flex-1">
+                Aceitar selecionados
+            </button>
+            <button id="rejectAllCookies" class="border border-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-50 transition-all flex-1">
+                Recusar todos
+            </button>
+        </div>
+        
+        <div class="text-center mt-3">
+            <a href="politica-cookies.html" class="text-green-600 text-xs hover:underline">
+                Mais informações sobre nossa política de cookies
+            </a>
+        </div>
+    </div>
+</body>
+</html>

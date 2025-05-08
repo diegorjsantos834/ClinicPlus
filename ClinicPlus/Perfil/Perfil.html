@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínic+ | Meu Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/Perfil.css">
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo Clinic+" width="30" height="auto" loading="lazy">
+                <span class="brand-name">Clinic+</span>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu" aria-label="Menu mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../Index.html" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="../Sobre nós.html" class="nav-links">Sobre</a></li>
+                <li class="nav-item"><a href="../Serviços/serviços.html" class="nav-links">Serviços</a></li>
+                <li class="nav-item"><a href="../Contato/Contato.html" class="nav-links">Contato</a></li>
+                
+              <!-- Perfil do Usuário -->
+                <li class="nav-item profile-dropdown">
+                    <div class="profile-toggle">
+                        <span>Meu Perfil</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="perfil.html" class="active"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                        <li><a href="consultas.html"><i class="fas fa-calendar-check"></i> Minhas Consultas</a></li>
+                        <li><a href="exames.html"><i class="fas fa-file-medical"></i> Meus Exames</a></li>
+                        <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+                        <li><a href="../Home/Inicio.html" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <div class="profile-header">
+            <h1><i class="fas fa-user-circle"></i> Meu Perfil</h1>
+            <button class="btn-edit"><i class="fas fa-edit"></i> Editar Perfil</button>
+        </div>
+
+        <div class="profile-container">
+            <!-- Seção Informações Pessoais -->
+            <section class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-id-card"></i> Informações Pessoais</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Nome Completo</label>
+                        <p>Maria da Silva Oliveira</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Data de Nascimento</label>
+                        <p>15/03/1985 (38 anos)</p>
+                    </div>
+                    <div class="info-item">
+                        <label>CPF</label>
+                        <p>123.456.789-00</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Gênero</label>
+                        <p>Feminino</p>
+                    </div>
+                    <div class="info-item">
+                        <label>E-mail</label>
+                        <p>maria.silva@email.com</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Telefone</label>
+                        <p>(11) 98765-4321</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Endereço</label>
+                        <p>Rua das Flores, 123 - São Paulo/SP</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Informações Médicas -->
+            <section class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-heartbeat"></i> Informações Médicas</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Tipo Sanguíneo</label>
+                        <p>A+</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Alergias</label>
+                        <p>Penicilina, Dipirona</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Medicações</label>
+                        <p>Losartana 50mg (1x ao dia)</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Condições Crônicas</label>
+                        <p>Hipertensão Arterial</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Plano de Saúde</label>
+                        <p>Amil Saúde - Platinum</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Número do Plano</label>
+                        <p>AMIL123456789</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Médico Principal -->
+            <section class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-md"></i> Médico Principal</h2>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-info">
+                        <img src="../IMG/retrato-de-enfermeiro-no-hospital.jpg" alt="Dr. Carlos Mendes" class="doctor-img">
+                        <div>
+                            <h3>Dr. Carlos Mendes</h3>
+                            <p class="specialty">Clínico Geral</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-contact">
+                        <p><i class="fas fa-phone"></i> (11) 2345-6789</p>
+                        <p><i class="fas fa-envelope"></i> dr.carlos@clinicplus.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Clínica Health+ - Sala 302</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Histórico Médico -->
+            <section class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-medical"></i> Histórico Médico Recente</h2>
+                    <a href="#" class="view-all">Ver tudo <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="medical-history">
+                    <div class="history-item">
+                        <div class="history-date">
+                            <span class="day">20</span>
+                            <span class="month">JUN</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="history-details">
+                            <h3>Consulta de Rotina</h3>
+                            <p class="doctor">Dra. Ana Oliveira - Dermatologia</p>
+                            <p class="description">Avaliação anual de pele. Recomendado uso de protetor solar diário.</p>
+                            <div class="history-actions">
+                                <a href="#" class="btn-details"><i class="fas fa-file-alt"></i> Ver Relatório</a>
+                                <a href="#" class="btn-download"><i class="fas fa-download"></i> Baixar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="history-item">
+                        <div class="history-date">
+                            <span class="day">15</span>
+                            <span class="month">MAI</span>
+                            <span class="year">2023</span>
+                        </div>
+                        <div class="history-details">
+                            <h3>Exame de Sangue</h3>
+                            <p class="doctor">Laboratório Diagnóstico+</p>
+                            <p class="description">Hemograma completo e dosagem de colesterol. Resultados dentro da normalidade.</p>
+                            <div class="history-actions">
+                                <a href="#" class="btn-details"><i class="fas fa-file-alt"></i> Ver Resultados</a>
+                                <a href="#" class="btn-download"><i class="fas fa-download"></i> Baixar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Próximas Consultas -->
+            <section class="profile-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-check"></i> Próximas Consultas</h2>
+                    <a href="consultas.html" class="view-all">Ver todas <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="appointments">
+                    <div class="appointment-card">
+                        <div class="appointment-date">
+                            <span class="day">05</span>
+                            <span class="month">JUL</span>
+                            <span class="time">14:30</span>
+                        </div>
+                        <div class="appointment-info">
+                            <h3>Consulta de Acompanhamento</h3>
+                            <p class="doctor">Dr. Carlos Mendes - Clínico Geral</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Clínica Health+ - Sala 302</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn-confirm"><i class="fas fa-check"></i> Confirmar</button>
+                            <button class="btn-reschedule"><i class="fas fa-calendar-alt"></i> Remarcar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="appointment-card">
+                        <div class="appointment-date">
+                            <span class="day">12</span>
+                            <span class="month">JUL</span>
+                            <span class="time">10:00</span>
+                        </div>
+                        <div class="appointment-info">
+                            <h3>Exame Preventivo</h3>
+                            <p class="doctor">Dra. Juliana Costa - Ginecologia</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Hospital Vida Plena - Ala B</p>
+                        </div>
+                        <div class="appointment-actions">
+                            <button class="btn-confirm"><i class="fas fa-check"></i> Confirmar</button>
+                            <button class="btn-reschedule"><i class="fas fa-calendar-alt"></i> Remarcar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" width="40">
+                    <span class="brand-name">Clinic+</span>
+                </div>
+                <p>Sua saúde é nossa prioridade. Oferecemos os melhores serviços médicos com tecnologia de ponta e atendimento humanizado.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/clinicplus" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+    
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../Sobre/Sobre nós.html">Sobre Nós</a></li>
+                    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+                    <li><a href="../Contato/Contato.html">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer">Av. Paulista, 1000 - São Paulo/SP</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+551198568696">(11) 98568-9696</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contato@clinicplus.com.br">contato@clinicplus.com.br</a></li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</li>
+                    <li><i class="fas fa-ambulance"></i> Emergências 24h</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="current-year"></span> clinic+. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Perfil.Js"></script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+    <!-- Cabeçalho do documento (metadados e links) -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <title>Clinic+ - Encontre os melhores médicos e clínicas</title>
+    <!-- Título da página exibido na aba do navegador -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega o framework Tailwind CSS via CDN -->
+    <script src="../JavaScript/Inicio.js"></script>
+    <!-- Carrega o arquivo JavaScript personalizado -->
+    <script src="../JavaScript/BuscaCep1.js"></script>
+    <!-- Carrega o arquivo JavaScript para busca de CEP -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Carrega a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+    <!-- Carrega a folha de estilo personalizada -->
+    <link rel="stylesheet" href="../CSS/Cookie.css">
+    <!-- Carrega a folha de estilo para o popup de cookies -->
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+    <!-- Define o favicon da página -->
+</head>
+<!-- Fecha a tag head (duplicada, pode ser removida) -->
+
+<body class="font-sans antialiased text-gray-800">
+    <!-- Corpo do documento com classes do Tailwind para estilização base -->
+
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo e nome da marca -->
+            <div class="logo">
+                <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" class="logo-img">
+                <span class="brand-name">Clinic+</span>
+            </div>
+
+            <!-- Botão de menu para mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Itens do menu de navegação -->
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="Index.html" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="../Sobre/Sobre nós.html" class="nav-links">Sobre</a></li>
+                <li class="nav-item"><a href="../Serviços/serviços.html" class="nav-links">Serviços</a></li>
+                <li class="nav-item"><a href="../Contato/Contato.html" class="nav-links">Contato</a></li>
+                <li class="nav-item cta-button"><a href="../Cadastro/CadastroProfissa.html" class="nav-links">Entrar/Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (principal) -->
+    <section id="home" class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <!-- Conteúdo textual -->
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Sua saúde em primeiro lugar</h1>
+                <p class="text-xl mb-8 opacity-90">Encontre os melhores médicos e clínicas especializadas perto de você. Agende consultas de forma rápida e fácil.</p>
+                
+                <!-- Caixa de busca -->
+                <div class="bg-white rounded-xl p-1 search-box">
+                    <div class="flex flex-col md:flex-row">
+                        <!-- Seleção de especialidade -->
+                        <div class="flex-1 p-2">
+                            <select class="w-full p-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700" id="especialidade-select">
+                                <option value="Especialidade médica" disabled selected>Especialidade médica</option>
+                                <option value="Cardiologia">Cardiologia</option>
+                                <option value="Dermatologia">Dermatologia</option>
+                                <option value="Ortopedia">Ortopedia</option>
+                                <option value="Pediatria">Pediatria</option>
+                                <option value="Ginecologia">Ginecologia</option>
+                                <option value="Psicologia">Psicologia</option>
+                                <option value="Fisioterapia">Fisioterapia</option>
+                                <option value="Neurologia">Neurologia</option>
+                                <option value="Nutrição">Nutrição</option>
+                            </select>
+                        </div>
+                        <!-- Campo de localização -->
+                        <div class="flex-1 p-2">
+                            <input type="text" placeholder="Localização ou CEP" class="w-full p-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                        </div>
+                        <!-- Botão de busca -->
+                        <div class="p-2">
+                            <button class="w-full md:w-auto bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all" id="botao-buscar">
+                                <i class="fas fa-search mr-2"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imagem do hero -->
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Médica sorrindo" class="rounded-xl shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de estatísticas -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Card de estatística 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-green-600 text-4xl font-bold mb-2">5,000+</div>
+                    <div class="text-gray-600">Médicos cadastrados</div>
+                </div>
+                <!-- Card de estatística 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-green-600 text-4xl font-bold mb-2">1,200+</div>
+                    <div class="text-gray-600">Clínicas parceiras</div>
+                </div>
+                <!-- Card de estatística 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-green-600 text-4xl font-bold mb-2">250,000+</div>
+                    <div class="text-gray-600">Pacientes atendidos</div>
+                </div>
+                <!-- Card de estatística 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-green-600 text-4xl font-bold mb-2">98%</div>
+                    <div class="text-gray-600">Satisfação dos pacientes</div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Seção de médicos em destaque -->
+    <section id="doctors" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Médicos em Destaque</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Profissionais altamente qualificados prontos para te atender</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card do médico 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm doctor-card transition-all">
+                    <div class="overflow-hidden h-64">
+                        <img src="../IMG/MedicoCirurgia.avif" alt="Dr. Carlos Silva" class="w-full h-full object-cover doctor-image transition-all">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Dr. Carlos Silva</h3>
+                                <p class="text-blue-600">Cardiologista</p>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>São Paulo, SP</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 250</span>
+                            <a href="../Home/Carlos.html" class="text-green-600 hover:text-green-800 font-medium">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card do médico 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm doctor-card transition-all">
+                    <div class="overflow-hidden h-64">
+                        <img src="../IMG/MulherAna.avif" alt="Dra. Ana Oliveira" class="w-full h-full object-cover doctor-image transition-all">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Dra. Ana Oliveira</h3>
+                                <p class="text-blue-600">Dermatologista</p>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Rio de Janeiro, RJ</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 220</span>
+                            <a href="../Home/Ana Oliveira.html" class="text-green-600 hover:text-green-800 font-medium">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card do médico 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm doctor-card transition-all">
+                    <div class="overflow-hidden h-64">
+                        <img src="../IMG/Dr.Marcos.avif" alt="Dr. Marcos Rocha" class="w-full h-full object-cover doctor-image transition-all">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Dr. Marcos Rocha</h3>
+                                <p class="text-blue-600">Ortopedista</p>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.7</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Belo Horizonte, MG</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 280</span>
+                            <a href="../Home/Marcos.html" class="text-green-600 hover:text-green-800 font-medium">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card do médico 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm doctor-card transition-all">
+                    <div class="overflow-hidden h-64">
+                        <img src="../IMG/Mulher02.avif" alt="Dra. Juliana Santos" class="w-full h-full object-cover doctor-image transition-all">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold">Dra. Juliana Santos</h3>
+                                <p class="text-blue-600">Pediatra</p>
+                            </div>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center text-gray-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Porto Alegre, RS</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 200</span>
+                            <a href="../Home/Julia.html" class="text-green-600 hover:text-green-800 font-medium">Ver perfil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de clínicas parceiras -->
+    <section id="clinics" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Clínicas Parceiras</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Instituições de saúde com excelência no atendimento</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card da clínica 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <div class="overflow-hidden h-48">
+                        <img src="../IMG/fisio,png.jpg" alt="Clínica YoungTerapia" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Clínica YoungTerapia</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.8</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Rua Geronimo, 351 - Centro - São Paulo, SP</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Fisioterapia</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Pediatria</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="../Clínicas/YoungTerapia.html" class="block w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all text-center">
+                                Ver detalhes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card da clínica 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <div class="overflow-hidden h-48">
+                        <img src="../IMG/medico-sorridente-com-estretoscopio-isolado-em-cinza.jpg" alt="Hospital Vida Plena" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Clínica São Lucas</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Rua das Palmeiras, 456 - Centro, São Bernardo do Campo</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Cardiologia</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Pediatria</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Ginecologia</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="../Clínicas/Clínica São Lucas.html" class="block w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all text-center">
+                                Ver detalhes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card da clínica 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <div class="overflow-hidden h-48">
+                        <img src="../IMG/Velha.avif" alt="Instituto Bem Estar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Clínica Coração Feliz</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-700">4.9</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-500 mb-3">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Rua das Flores, 123 - Centro</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Pediatria</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Cardiologia</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="../Clínicas/CoracaoFeliz.html" class="block w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all text-center">
+                                Ver detalhes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botão para ver mais clínicas -->
+            <div class="text-center mt-10">
+                <button onclick="window.location.href='../Serviços/serviços.html'"class="bg-white border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50 transition-all font-medium">
+                    Ver todas as clínicas
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção "Como funciona" -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Como Funciona</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Encontrar o médico perfeito nunca foi tão fácil</p>
+            </div>
+            
+            <!-- Passos do processo -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Passo 1 -->
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Busque por especialidade</h3>
+                    <p class="text-gray-600">Encontre médicos e clínicas por especialidade, localização ou nome.</p>
+                </div>
+                
+                <!-- Passo 2 -->
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Compare e escolha</h3>
+                    <p class="text-gray-600">Veja avaliações, preços e disponibilidade para tomar a melhor decisão.</p>
+                </div>
+                
+                <!-- Passo 3 -->
+                <div class="text-center">
+                    <div class="bg-green-100 text-green-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Agende sua consulta</h3>
+                    <p class="text-gray-600">Marque sua consulta online e receba confirmação imediata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA (Call to Action) -->
+    <section class="py-16 hero-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para cuidar da sua saúde?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Cadastre-se gratuitamente e tenha acesso aos melhores médicos e clínicas do país.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <!-- Botão primário -->
+                <button onclick="window.location.href='../Cadastro/CadastroProfissa.html'"class="bg-white text-green-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all">
+                    Cadastre-se agora
+                </button>
+                <!-- Botão secundário -->
+                <button onclick="window.location.href='../Sobre/Sobre nós.html'" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-all">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Popup de consentimento de cookies -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="flex items-start mb-4">
+            <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center mr-4 shrink-0">
+                <i class="fas fa-cookie-bite text-lg"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 mb-1">Política de Cookies</h3>
+                <p class="text-gray-600 text-sm">Utilizamos cookies para melhorar sua experiência em nosso site, personalizar conteúdo e anúncios, fornecer recursos de mídia social e analisar nosso tráfego.</p>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-100 pt-4 mb-4">
+            <!-- Opção de cookies essenciais -->
+            <div class="flex items-center mb-3">
+                <input type="checkbox" id="essentialCookies" checked disabled class="w-4 h-4 accent-green-600">
+                <label for="essentialCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies essenciais (obrigatórios)</label>
+            </div>
+            <!-- Opção de cookies analíticos -->
+            <div class="flex items-center mb-3">
+                <input type="checkbox" id="analyticalCookies" checked class="w-4 h-4 accent-green-600">
+                <label for="analyticalCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies analíticos</label>
+            </div>
+            <!-- Opção de cookies de marketing -->
+            <div class="flex items-center">
+                <input type="checkbox" id="marketingCookies" checked class="w-4 h-4 accent-green-600">
+                <label for="marketingCookies" class="ml-2 text-sm font-medium text-gray-700">Cookies de marketing</label>
+            </div>
+        </div>
+        
+        <!-- Botões de ação para cookies -->
+        <div class="flex flex-col sm:flex-row gap-2">
+            <button id="acceptAllCookies" class="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-all flex-1">
+                Aceitar todos
+            </button>
+            <button id="acceptSelectedCookies" class="border border-green-600 text-green-600 py-2 px-4 rounded-lg font-medium hover:bg-green-50 transition-all flex-1">
+                Aceitar selecionados
+            </button>
+            <button id="rejectAllCookies" class="border border-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium hover:bg-gray-50 transition-all flex-1">
+                Recusar todos
+            </button>
+        </div>
+        
+        <!-- Link para mais informações -->
+        <div class="text-center mt-3">
+            <a href="../Cookie/Cookie.html" class="text-green-600 text-xs hover:underline">
+                Mais informações sobre nossa política de cookies
+            </a>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Seção 1 do rodapé (logo e redes sociais) -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" width="40">
+                    <span class="brand-name">Clinic+</span>
+                </div>
+                <p>Sua saúde é nossa prioridade. Oferecemos os melhores serviços médicos com tecnologia de ponta e atendimento humanizado.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/clinicplus" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <!-- Seção 2 do rodapé (links rápidos) -->
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="../Sobre/Sobre nós.html">Sobre Nós</a></li>
+                    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+                    <li><a href="../Contato/Contato.html">Contato</a></li>
+                </ul>
+            </div>
+    
+            <!-- Seção 3 do rodapé (contato) -->
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer">Av. Paulista, 1000 - São Paulo/SP</a></li>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+551198568696">(11) 98568-9696</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contato@clinicplus.com.br">contato@clinicplus.com.br</a></li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 8h-14h</li>
+                    <li><i class="fas fa-ambulance"></i> Emergências 24h</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Rodapé inferior (direitos autorais e links legais) -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="current-year"></span> clinic+. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para verificar status do Google Maps -->
+    <div id="maps-status" style="display: none; position: fixed; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; z-index: 1000;"></div>
+    
+    <!-- Carrega o script de cookies -->
+    <script src="../JavaScript/Cookie.js"></script>
+</body>
+</html>

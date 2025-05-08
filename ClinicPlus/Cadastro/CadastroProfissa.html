@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação | Clinic+</title>
+    <link rel="stylesheet" href="../CSS/Cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../IMG/ClinicWhere__2_-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo clinic+" class="logo-img">
+                <span class="brand-name">Clinic+</span>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../Index.html" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="../Sobre/Sobre nós.html" class="nav-links">Sobre</a></li>
+                <li class="nav-item"><a href="../Serviços/serviços.html" class="nav-links">Serviços</a></li>
+                <li class="nav-item"><a href="../Contato/Contato.html" class="nav-links">Contato</a></li>
+                <li class="nav-item cta-button active" id="auth-button"><a href="#" class="nav-links">Entrar/Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Modal de Escolha -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Bem-vindo ao Clinic+</h2>
+            <div class="auth-options">
+                <button id="btn-login" class="auth-option">Entrar</button>
+                <button id="btn-cadastro" class="auth-option">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Seleção de Tipo de Usuário (Login) -->
+    <main class="content" id="login-type-content" style="display:none;">
+        <div class="type-container">
+            <h1>Entrar como</h1>
+            <div class="type-options">
+                <button class="type-option" data-type="paciente-login">
+                    <i class="fas fa-user-injured"></i>
+                    <span>Paciente</span>
+                </button>
+                <button class="type-option" data-type="medico-login">
+                    <i class="fas fa-user-md"></i>
+                    <span>Médico</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tela de Login Paciente -->
+    <main class="content" id="login-paciente-content" style="display:none;">
+        <div class="login-container">
+            <h1>Entrar como Paciente</h1>
+            <form id="formLoginPaciente" class="login-form">
+                <div class="form-group">
+                    <label for="login-paciente-email">E-mail</label>
+                    <input type="email" id="login-paciente-email" name="login-paciente-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-paciente-senha">Senha</label>
+                    <input type="password" id="login-paciente-senha" name="login-paciente-senha" required>
+                </div>
+                <div class="form-options">
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn-enviar">Entrar</button>
+                <p class="register-link">Não tem uma conta? <a href="#" id="go-to-register-from-login-paciente">Cadastre-se</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Tela de Login Médico -->
+    <main class="content" id="login-medico-content" style="display:none;">
+        <div class="login-container">
+            <h1>Entrar como Médico</h1>
+            <form id="formLoginMedico" class="login-form">
+                <div class="form-group">
+                    <label for="login-medico-email">E-mail</label>
+                    <input type="email" id="login-medico-email" name="login-medico-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-medico-senha">Senha</label>
+                    <input type="password" id="login-medico-senha" name="login-medico-senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-medico-crm">CRM</label>
+                    <input type="text" id="login-medico-crm" name="login-medico-crm" placeholder="CRM/UF-123456" required>
+                </div>
+                <div class="form-options">
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn-enviar">Entrar</button>
+                <p class="register-link">Não tem uma conta? <a href="#" id="go-to-register-from-login-medico">Cadastre-se</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Tela de Cadastro -->
+    <main class="content" id="main-content">
+        <div class="type-container">
+            <h1>Cadastre-se como</h1>
+            <div class="type-options">
+                <button class="type-option" data-type="paciente-cadastro">
+                    <i class="fas fa-user-injured"></i>
+                    <span>Paciente</span>
+                </button>
+                <button class="type-option" data-type="medico-cadastro">
+                    <i class="fas fa-user-md"></i>
+                    <span>Médico</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Tela de Cadastro Paciente -->
+    <main class="content" id="cadastro-paciente-content" style="display:none;">
+        <div class="cadastro-container">
+            <h1>Cadastro de Paciente</h1>
+            <form id="formCadastroPaciente" class="cadastro-form">
+                <div class="form-group">
+                    <label for="nome-paciente">Nome Completo</label>
+                    <input type="text" id="nome-paciente" name="nome-paciente" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf-paciente">CPF</label>
+                    <input type="text" id="cpf-paciente" name="cpf-paciente" placeholder="000.000.000-00" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-paciente">E-mail</label>
+                    <input type="email" id="email-paciente" name="email-paciente" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone-paciente">Telefone</label>
+                    <input type="tel" id="telefone-paciente" name="telefone-paciente" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha-paciente">Senha</label>
+                    <input type="password" id="senha-paciente" name="senha-paciente" minlength="6" required>
+                </div>
+                <button type="submit" class="btn-enviar">Cadastrar</button>
+                <p class="login-link">Já tem uma conta? <a href="#" id="go-to-login-from-cadastro-paciente">Entrar</a></p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Tela de Cadastro Médico -->
+    <main class="content" id="cadastro-medico-content" style="display:none;">
+        <div class="cadastro-container">
+            <h1>Cadastro de Médico</h1>
+            <form id="formCadastroMedico" class="cadastro-form">
+                <div class="form-group">
+                    <label for="nome-medico">Nome Completo</label>
+                    <input type="text" id="nome-medico" name="nome-medico" required>
+                </div>
+                <div class="form-group">
+                    <label for="crm-medico">CRM</label>
+                    <input type="text" id="crm-medico" name="crm-medico" placeholder="CRM/UF-123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidade-medico">Especialidade</label>
+                    <select id="especialidade-medico" name="especialidade-medico" required>
+                        <option value="">Selecione...</option>
+                        <option value="cardiologia">Cardiologia</option>
+                        <option value="dermatologia">Dermatologia</option>
+                        <option value="pediatria">Pediatria</option>
+                        <option value="ortopedia">Ortopedia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email-medico">E-mail</label>
+                    <input type="email" id="email-medico" name="email-medico" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone-medico">Telefone</label>
+                    <input type="tel" id="telefone-medico" name="telefone-medico" placeholder="(11) 99999-9999" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha-medico">Senha</label>
+                    <input type="password" id="senha-medico" name="senha-medico" minlength="6" required>
+                </div>
+                <button type="submit" class="btn-enviar">Cadastrar</button>
+                <p class="login-link">Já tem uma conta? <a href="#" id="go-to-login-from-cadastro-medico">Entrar</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../IMG/ClinicWhere__2_-removebg-preview.png" alt="Logo Clinic+" class="footer-logo-img" width="40">
+                    <span class="brand-name">Clinic+</span>
+                </div>
+                <p class="footer-description">Sua saúde é nossa prioridade. Oferecemos os melhores serviços médicos com tecnologia de ponta e atendimento humanizado.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3 class="footer-title">Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../Index.html">Home</a></li>
+                    <li><a href="../Sobre/Sobre nós.html">Sobre Nós</a></li>
+                    <li><a href="../Serviços/serviços.html">Serviços</a></li>
+                    <li><a href="../Contato/Contato.html">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3 class="footer-title">Contato</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo/SP</li>
+                    <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+                    <li><i class="fas fa-envelope"></i> contato@clinicplus.com.br</li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 7h-19h | Sáb: 8h-14h</li>
+                    <li><i class="fas fa-ambulance"></i> Emergências 24h</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; <span id="current-year"></span> Clinic+. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                    <a href="#">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/Cadastro.js"></script>
+</body>
+</html>
